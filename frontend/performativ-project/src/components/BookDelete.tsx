@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { API_LIST_ENDPOINT } from './backendEndpointConfig';
-import { BookDeleteProps } from './types';
 
-const BookDelete: React.FC<BookDeleteProps> = ({ bookId, onDelete }) => {
+type Props = {
+  bookId: number;
+  onDelete: () => void;
+};
+
+const BookDelete: React.FC<Props> = ({ bookId, onDelete }) => {
   const [deleteStatus, setDeleteStatus] = useState<'idle' | 'pending' | 'success' | 'error'>('idle');
 
   const handleDelete = async () => {
     setDeleteStatus('pending');
 
     try {
-      // Delete logic
+      await axios.delete(`${API_LIST_ENDPOINT}/${bookId}`);
       setDeleteStatus('success');
       onDelete();
     } catch (error) {
