@@ -88,6 +88,23 @@ routes/api.php - Defines the API routes for the book-related operations.
 
 frontend/performativ-project - Contains the frontend code for the book management system.
 
+
+# Running Backend Tests
+To execute the backend tests for the application, you can use the following command:
+
+`php artisan test`
+
+This command will run all the tests located in the tests directory. It includes both unit tests and feature tests.
+
+If you want to run a specific test class or test case, you can use the --filter option followed by the test class or test case name. For example, to run only the BooksApiTest class, you can use:
+
+`php artisan test --filter BooksApiTest`
+
+Make sure to set up the database for testing, which is usually handled by Laravel's testing framework. You can configure the testing database in the .env.testing file.
+
+By running the tests, you can verify the functionality and behavior of the backend API endpoints defined in the application.
+
+
 # Contributing
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
 
