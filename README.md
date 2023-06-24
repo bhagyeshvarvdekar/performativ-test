@@ -16,6 +16,8 @@ Generate the application key: `php artisan key:generate`
 
 Set up your database credentials in the .env file
 
+The database has to be mentioned in the .env file and is assumed to be already created.
+
 Run the database migrations: `php artisan migrate`
 
 Start the MySQL server. Use the following command:
