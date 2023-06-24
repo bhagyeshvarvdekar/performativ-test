@@ -4,29 +4,31 @@ Book Management System
 This is a simple book management system built with Laravel. It allows users to perform CRUD (Create, Read, Update, Delete) operations on books.
 
 # Installation
-Clone the repository: git clone https://github.com/bhagyeshvarvdekar/performativ-test.git
+Clone the repository: `git clone https://github.com/bhagyeshvarvdekar/performativ-test.git`
 
-Navigate to the project directory: cd performativ-test
+Navigate to the project directory: `cd performativ-test`
 
 Install the dependencies: composer install
 
 Create a copy of the .env.example file and rename it to .env
 
-Generate the application key: php artisan key:generate
+Generate the application key: `php artisan key:generate`
 
 Set up your database credentials in the .env file
 
-Run the database migrations: php artisan migrate
+Run the database migrations: `php artisan migrate`
 
 Start the MySQL server. Use the following command:
 
-For Mac: mysql.server start
-For Linux: sudo service mysql start
-Seed the database with sample data: php artisan db:seed
+For Mac: `mysql.server start`
+For Linux: `sudo service mysql start`
+Seed the database with sample data: `php artisan db:seed`
 
-Start the PHP development server: php artisan serve
+Start the PHP development server: `php artisan serve`
 
 The server will run at http://127.0.0.1:8000.
+
+Please note that this development server is intended for local development and may not include optimizations for production environments.
 
 # Usage
 Access the application in your browser at http://localhost:8000
@@ -46,9 +48,34 @@ DELETE /api/books/{id} - Delete a book by ID
 To start the frontend development server, follow these steps:
 
 Navigate to the frontend/performativ-project folder.
-Install the required dependencies: npm install
-Start the development server: npm start
+Install the required dependencies: `npm install`
+
+Start the development server: `npm start`
+
 The server will run at http://localhost:3000.
+
+Please note that this development server is intended for local development and may not include optimizations for production environments.
+
+## Main Page of the website
+
+The main page displays a list of all the books in your library. Here's what you can do on the main page:
+
+- View Books: Browse through the list of books and get an overview of their details, including the title, author, description, and category.
+
+- Sort Books: Sort the books based on different criteria such as title, author, or category. You can choose to sort the books in ascending or descending order.
+
+- Filter Books: Use the search functionality to filter the books based on specific keywords. The search query will match against the book's title, author, or category.
+
+- Additional Information: When viewing a book, the application integrates with Wikipedia to provide additional information about the book. You can find a summary, related articles, and more details sourced from Wikipedia.
+
+- Book Images: The application also retrieves book images from an external source and displays them alongside the book information. This enhances the visual experience and helps you identify the books quickly.
+
+- Manage Books: Each book entry in the list provides options to edit or delete the book. Clicking on the "Edit" button allows you to update the book's information, while the "Delete" button removes the book from your library.
+
+- Add New Book: At the top of the page, there is a button labeled "Add Book." Clicking on this button takes you to a form where you can enter the details of a new book and add it to your collection.
+
+Feel free to explore the main page and make use of the sorting, filtering, and management features to organize and maintain your book library efficiently. Enjoy the integration with Wikipedia and the visual representation of book images!
+
 
 # Folder Structure
 app/Http/Controllers - Contains the controller classes responsible for handling book-related operations.
