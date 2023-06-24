@@ -15,17 +15,24 @@ class BooksTableSeeder extends Seeder
     public function run(): void
     {
         Book::create([
-            'title' => 'Book 1',
-            'description' => 'Description 1',
-            'author' => 'Author 1',
-            'category' => 'Category 1',
+            'title' => 'Ulysses',
+            'description' => 'Ulysses chronicles the passage of Leopold Bloom through Dublin during an ordinary day, June 16, 1904.',
+            'author' => 'James Joyce',
+            'category' => 'novel',
         ]);
 
         Book::create([
-            'title' => 'Book 2',
-            'description' => 'Description 2',
-            'author' => 'Author 2',
-            'category' => 'Category 2',
+            'title' => 'Don Quixote',
+            'description' => 'Alonso Quixano, a retired country gentleman in his fifties, lives in an unnamed section of La Mancha with his niece and a housekeeper.',
+            'author' => 'Miguel de Cervantes',
+            'category' => 'novel',
+        ]);
+
+        Book::create([
+            'title' => 'The Great Gatsby',
+            'description' => 'The novel chronicles an era that Fitzgerald himself dubbed the Jazz Age',
+            'author' => 'F. Scott Fitzgerald',
+            'category' => 'fiction',
         ]);
     }
 }
